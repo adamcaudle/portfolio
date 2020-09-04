@@ -3,6 +3,7 @@ from datetime import timedelta
 from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
+app.static_folder = 'static'
 app.secret_key = "hello"
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///users.sqlite3'
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
